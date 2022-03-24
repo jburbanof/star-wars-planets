@@ -58,8 +58,8 @@
 		}
 	},
 	"lint-staged": {
-		"*.tsx": [
-			"./node_modules/.bin/eslint — fix",
+		"**/*.{js, jsx, ts, tsx}": [
+			"eslint --fix",
 			"git add"
 		]
 	}
