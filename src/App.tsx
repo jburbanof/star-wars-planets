@@ -35,7 +35,7 @@ function App() {
 	return (
 		<div className="App">
 			{data.results.map((planet: resultTypes) => {
-				return <h1>{planet.name]{{}}}</h1>;
+				return <h1>{planet.name]{{asd}}das}</h1>;
 			})}
 		</div>
 	);
