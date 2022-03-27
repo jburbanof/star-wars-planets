@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/star-wars-planets/static/css/main.9cf378ec.css",
+    "main.css": "/star-wars-planets/static/css/main.6c75723b.css",
     "main.js": "/star-wars-planets/static/js/main.9ac82bc6.js",
     "static/js/787.497d2d5a.chunk.js": "/star-wars-planets/static/js/787.497d2d5a.chunk.js",
     "static/media/starjedi-webfont.woff": "/star-wars-planets/static/media/starjedi-webfont.bfd3e5252bfa852c90d3.woff",
     "static/media/starjedi-webfont.woff2": "/star-wars-planets/static/media/starjedi-webfont.222f8871b24b0712dc57.woff2",
     "static/media/R2-D2Icon.svg": "/star-wars-planets/static/media/R2-D2Icon.d193e0b0c7d16db0be7be9164f4ef750.svg",
     "index.html": "/star-wars-planets/index.html",
-    "main.9cf378ec.css.map": "/star-wars-planets/static/css/main.9cf378ec.css.map",
+    "main.6c75723b.css.map": "/star-wars-planets/static/css/main.6c75723b.css.map",
     "main.9ac82bc6.js.map": "/star-wars-planets/static/js/main.9ac82bc6.js.map",
     "787.497d2d5a.chunk.js.map": "/star-wars-planets/static/js/787.497d2d5a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9cf378ec.css",
+    "static/css/main.6c75723b.css",
     "static/js/main.9ac82bc6.js"
   ]
 }
