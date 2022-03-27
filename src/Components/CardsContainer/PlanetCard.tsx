@@ -4,7 +4,7 @@ import { resultTypes } from "../../Types";
 
 interface propsTypes {
 	planetData: resultTypes;
-	setValues?: any;
+	setValues: any;
 }
 
 const PlanetCard = ({ planetData, setValues }: propsTypes) => {
@@ -15,7 +15,7 @@ const PlanetCard = ({ planetData, setValues }: propsTypes) => {
 		});
 	};
 	return (
-		<div className="card">
+		<div className="card" data-cy={planetData.name}>
 			<h3>{planetData.name}</h3>
 			<div className="planetData">
 				<strong>Climate: </strong> <span>{planetData.climate}</span>
@@ -39,7 +39,7 @@ const PlanetCard = ({ planetData, setValues }: propsTypes) => {
 				<span>{planetData.rotation_period} hours</span>
 			</div>
 			<div style={{ textAlign: "right", marginTop: "15px" }}>
-				<Button color="primary" variant="contained" onClick={handleDelete}>
+				<Button color="primary" variant="contained" onClick={handleDelete} data-cy="delete">
 					Delete
 				</Button>
 			</div>
