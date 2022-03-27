@@ -5,8 +5,9 @@ import axios from "axios";
 import { useSnackbar } from "notistack";
 import CardsContainer from "./Components/CardsContainer";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Autocomplete, Icon, SvgIcon, TextField } from "@mui/material";
+import { Autocomplete, SvgIcon, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+
 const theme = createTheme({
 	palette: {
 		primary: {
@@ -27,16 +28,18 @@ export const PlanetsContext = createContext<planetContextTypes>({
 });
 
 function App() {
+	const { enqueueSnackbar } = useSnackbar();
 	const [search, setSearch] = useState("");
 	const url = `https://swapi.dev/api/planets/?search=${search}`;
-	const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+
 	const [planetsList, setPlanetsList] = useState<resultTypes[]>([]);
 	const [searchResults, setSearchResults] = useState([]);
+
 	const fetchData = async () => {
 		const response = await axios.get(url).then((res) => res.data);
 		setSearchResults(response.results);
 	};
-	const handleSearchField = (value: resultTypes) => {
+	const handleSearchFieldSelect = (value: resultTypes) => {
 		if (planetsList.includes(value) || !value) {
 			enqueueSnackbar(`You have already selectes ${value.name}`, {
 				variant: "error",
@@ -49,7 +52,6 @@ function App() {
 	useEffect(() => {
 		fetchData();
 	}, [search]);
-
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -77,7 +79,8 @@ function App() {
 								inputValue={search}
 								filterSelectedOptions
 								getOptionLabel={(option: resultTypes) => option.name}
-								onChange={(e, value: any) => handleSearchField(value)}
+								// eslint-disable-next-line @typescript-eslint/no-explicit-any
+								onChange={(e, value: any) => handleSearchFieldSelect(value)}
 								popupIcon={
 									<SvgIcon width={100} fontSize="large">
 										<SearchIcon />

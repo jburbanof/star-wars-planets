@@ -16,5 +16,6 @@ export interface resultTypes {
 }
 export interface planetContextTypes {
 	value: resultTypes[];
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	setValue: any;
 }
