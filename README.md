@@ -1,7 +1,7 @@
 
 # Star Wars Planets
 
-In this web App you can search for the planets that appear in the star wars movies and get some caracteristics of it.
+In this web App you can search for the planets that appear in the star wars movies and get some characteristics of it.
 
 
 ## Getting Started
